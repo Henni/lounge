@@ -9,14 +9,14 @@ process.setMaxListeners(0);
 
 module.exports = function(irc, network) {
 	var client = this;
-	irc.on("message", function(data) {
+	irc.on("privmsg", function(data) {
 		var config = Helper.getConfig();
 		if (!config.prefetch) {
 			return;
 		}
 
 		var links = [];
-		var split = data.message.split(" ");
+		var split = data.msg.split(" ");
 		_.each(split, function(w) {
 			var match = w.indexOf("http://") === 0 || w.indexOf("https://") === 0;
 			if (match) {
@@ -28,8 +28,7 @@ module.exports = function(irc, network) {
 			return;
 		}
 
-		var self = data.to.toLowerCase() === irc.user.nick.toLowerCase();
-		var chan = _.find(network.channels, {name: self ? data.from : data.to});
+		var chan = _.find(network.channels, {name: data.target});
 		if (typeof chan === "undefined") {
 			return;
 		}

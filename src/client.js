@@ -18,7 +18,7 @@ var events = [
 //	"invite",
 	"join",
 //	"kick",
-//	"mode",
+	"mode",
 	"motd",
 	"message",
 //	"link",

@@ -24,9 +24,9 @@ var events = [
 //	"link",
 	"names",
 //	"nick",
-//	"part",
-//	"quit",
-//	"topic",
+	"part",
+	"quit",
+	"topic",
 	"welcome",
 //	"whois"
 ];

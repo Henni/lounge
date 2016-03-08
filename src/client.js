@@ -32,20 +32,20 @@ var events = [
 ];
 var inputs = [
 	// These inputs are sorted in order that is most likely to be used
-//	"msg",
-//	"whois",
-//	"part",
-//	"action",
+	"msg",
+	"whois",
+	"part",
+	"action",
 	"connect",
-//	"invite",
-//	"join",
-//	"kick",
-//	"mode",
-//	"nick",
-//	"notice",
-//	"quit",
-//	"raw",
-//	"topic",
+	"invite",
+	"join",
+	"kick",
+	"mode",
+	"nick",
+	"notice",
+	"quit",
+	"raw",
+	"topic",
 ].reduce(function(plugins, name) {
 	var path = "./plugins/inputs/" + name;
 	var plugin = require(path);

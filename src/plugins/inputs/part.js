@@ -5,10 +5,9 @@ exports.commands = ["close", "leave", "part"];
 exports.input = function(network, chan, cmd, args) {
 	if (chan.type !== "query") {
 		var irc = network.irc;
-		if (args.length === 0) {
-			args.push(chan.name);
-		}
-		irc.part(args);
+		var channel = args.length === 0 ? chan.name : args.shift();
+
+		irc.part(channel, args);
 	}
 
 	network.channels = _.without(network.channels, chan);

@@ -23,7 +23,7 @@ var events = [
 	"message",
 //	"link",
 	"names",
-//	"nick",
+	"nick",
 	"part",
 	"quit",
 	"topic",

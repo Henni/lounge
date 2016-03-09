@@ -28,7 +28,7 @@ var events = [
 	"quit",
 	"topic",
 	"welcome",
-//	"whois"
+	"whois"
 ];
 var inputs = [
 	// These inputs are sorted in order that is most likely to be used

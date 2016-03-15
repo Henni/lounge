@@ -1,7 +1,7 @@
-module.exports = function(network, chan, cmd, args) {
-	if (cmd !== "list") {
-		return;
-	}
+exports.commands = ["list"];
 
+exports.input = function(network, chan, cmd, args) {
 	network.irc.raw("LIST", args.join(" "));
+
+	return true;
 };

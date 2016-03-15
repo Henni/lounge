@@ -9,9 +9,9 @@
 	<tbody>
 		{{#each channels}}
 			<tr>
-				<td>{{parse channel}}</td>
+				<td>{{{parse channel}}}</td>
 				<td>{{num_users}}</td>
-				<td>{{parse topic}}</td>
+				<td>{{{parse topic}}}</td>
 			</tr>
 		{{/each}}
 	</tbody>

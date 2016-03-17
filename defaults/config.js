@@ -209,9 +209,9 @@ module.exports = {
 	// Set socket.io transports
 	//
 	// @type     array
-	// @default  ["polling', "websocket"]
+	// @default  ["websocket", "polling"]
 	//
-	transports: ["polling", "websocket"],
+	transports: ["websocket", "polling"],
 
 	//
 	// Run The Lounge with HTTPS support.
